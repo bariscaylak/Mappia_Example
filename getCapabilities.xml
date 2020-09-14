@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WMT_MS_Capabilities version="1.1.1" updateSequence="63258">
+	<Service>
+		<Name>OGC:WMS</Name>
+		<Title>CSR Web Map Service</Title>
+		<Abstract>Compliant WMS Response</Abstract>
+		<KeywordList>
+			<Keyword>WFS</Keyword>
+			<Keyword>WMS</Keyword>
+			<Keyword>GEOSERVER</Keyword>
+		</KeywordList>
+		<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoserver.sourceforge.net/html/index.php"></OnlineResource>
+		<ContactInformation>
+			<ContactPersonPrimary>
+				<ContactPerson>GITHUB owner</ContactPerson>
+				<ContactOrganization>GITHUB owner</ContactOrganization>
+			</ContactPersonPrimary>
+			<ContactPosition>Chief geographer</ContactPosition>
+			<ContactAddress>
+				<AddressType>Work</AddressType>
+				<Address></Address>
+				<City>Alexandria</City>
+				<StateOrProvince></StateOrProvince>
+				<PostCode></PostCode>
+				<Country>Egypt</Country>
+			</ContactAddress>
+			<ContactVoiceTelephone></ContactVoiceTelephone>
+			<ContactFacsimileTelephone></ContactFacsimileTelephone>
+			<ContactElectronicMailAddress>claudius.ptolomaeus@gmail.com</ContactElectronicMailAddress>
+		</ContactInformation>
+		<Fees>NONE</Fees>
+		<AccessConstraints>NONE</AccessConstraints>
+	</Service>
+	<Capability>
+		<Request>
+			<GetCapabilities>
+				<Format>application/vnd.ogc.wms_xml</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://maps.csr.ufmg.br:80/geoserver/wms?SERVICE=WMS&amp;"></OnlineResource>
+						</Get>
+						<Post>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://maps.csr.ufmg.br:80/geoserver/wms?SERVICE=WMS&amp;"></OnlineResource>
+						</Post>
+					</HTTP>
+				</DCPType>
+			</GetCapabilities>
+			<GetMap>
+				<Format>image/png</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://maps.csr.ufmg.br:80/geoserver/wms?SERVICE=WMS&amp;"></OnlineResource>
+						</Get>
+					</HTTP>
+				</DCPType>
+			</GetMap>
+			<GetFeatureInfo>
+				<Format>text/plain</Format>
+				<Format>application/vnd.ogc.gml</Format>
+				<Format>application/vnd.ogc.gml/3.1.1</Format>
+				<Format>text/html</Format>
+				<Format>application/json</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://maps.csr.ufmg.br:80/geoserver/wms?SERVICE=WMS&amp;"></OnlineResource>
+						</Get>
+						<Post>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://maps.csr.ufmg.br:80/geoserver/wms?SERVICE=WMS&amp;"></OnlineResource>
+						</Post>
+					</HTTP>
+				</DCPType>
+			</GetFeatureInfo>
+			<DescribeLayer>
+				<Format>application/vnd.ogc.wms_xml</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://maps.csr.ufmg.br:80/geoserver/wms?SERVICE=WMS&amp;"></OnlineResource>
+						</Get>
+					</HTTP>
+				</DCPType>
+			</DescribeLayer>
+			<GetLegendGraphic>
+				<Format>image/png</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://maps.csr.ufmg.br:80/geoserver/wms?SERVICE=WMS&amp;"></OnlineResource>
+						</Get>
+					</HTTP>
+				</DCPType>
+			</GetLegendGraphic>
+			<GetStyles>
+				<Format>application/vnd.ogc.sld+xml</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://maps.csr.ufmg.br:80/geoserver/wms?SERVICE=WMS&amp;"></OnlineResource>
+						</Get>
+					</HTTP>
+				</DCPType>
+			</GetStyles>
+		</Request>
+		<Exception>
+			<Format>application/vnd.ogc.se_xml</Format>
+			<Format>application/vnd.ogc.se_inimage</Format>
+		</Exception>
+		<VendorSpecificCapabilities>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_test_polygon</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_test_polygon</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:alluvial_boundary</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:alluvial_boundary</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:coastline</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:coastline</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_reservoirs_ponds</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_reservoirs_ponds</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_rivers_streams</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_rivers_streams</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_soil_gediz_toprak_ed50_utm</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_soil_gediz_toprak_ed50_utm</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_landuse_gediz_lu_2018</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_landuse_gediz_lu_2018</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_geologicaldata_bin_birimler_modify_</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_geologicaldata_bin_birimler_modify_</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_watershed_boundary</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:gediz_watershed_boundary</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:kuvaterner_aluvyon</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:kuvaterner_aluvyon</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:mesezoyik_kirectasi</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:mesezoyik_kirectasi</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:mezezoyik_filis</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:mezezoyik_filis</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:neojen_killi_kirectasi</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:neojen_killi_kirectasi</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:neojen_kirintili_birimler</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:neojen_kirintili_birimler</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:paleozoyik_birimler</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:paleozoyik_birimler</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:paleozoyik_mermer</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:paleozoyik_mermer</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:4326</SRS>
+				<BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-90.0" maxx="0.0" maxy="90.0"></BoundingBox>
+				<Resolutions>0.703125 0.3515625 0.17578125 0.087890625 0.0439453125 0.02197265625 0.010986328125 0.0054931640625 0.00274658203125 0.001373291015625 6.866455078125E-4 3.4332275390625E-4 1.71661376953125E-4 8.58306884765625E-5 4.291534423828125E-5 2.1457672119140625E-5 1.0728836059570312E-5 5.364418029785156E-6 2.682209014892578E-6 1.341104507446289E-6 6.705522537231445E-7 3.3527612686157227E-7</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:volkanik_kayalar</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<TileSet>
+				<SRS>EPSG:900913</SRS>
+				<BoundingBox SRS="EPSG:900913" minx="-2.003750834E7" miny="-2.003750834E7" maxx="2.003750834E7" maxy="2.003750834E7"></BoundingBox>
+				<Resolutions>156543.03390625 78271.516953125 39135.7584765625 19567.87923828125 9783.939619140625 4891.9698095703125 2445.9849047851562 1222.9924523925781 611.4962261962891 305.74811309814453 152.87405654907226 76.43702827453613 38.218514137268066 19.109257068634033 9.554628534317017 4.777314267158508 2.388657133579254 1.194328566789627 0.5971642833948135 0.29858214169740677 0.14929107084870338 0.07464553542435169 0.037322767712175846 0.018661383856087923 0.009330691928043961 0.004665345964021981 0.0023326729820109904 0.0011663364910054952 5.831682455027476E-4 2.915841227513738E-4 1.457920613756869E-4</Resolutions>
+				<Width>256</Width>
+				<Height>256</Height>
+				<Format>image/png</Format>
+				<Layers>GH:volkanik_kayalar</Layers>
+				<Styles></Styles>
+			</TileSet>
+			<CustomLayer>
+				<Name>GH:gediz_gaging_stations</Name>
+				<Title>gediz_gaging_stations</Title>
+				<Operation type="csv">1</Operation>
+			</CustomLayer>
+			<CustomLayer>
+				<Name>GH:climate_station_climate_stations</Name>
+				<Title>climate_station_climate_stations</Title>
+				<Operation type="csv">1</Operation>
+			</CustomLayer>
+			<CustomLayer>
+				<Name>GH:gediz_jeotermalkaynak</Name>
+				<Title>gediz_jeotermalkaynak</Title>
+				<Operation type="csv">1</Operation>
+			</CustomLayer>
+			<CustomLayer>
+				<Name>GH:olculen_h_yerel</Name>
+				<Title>olculen_h_yerel</Title>
+				<Operation type="csv">1</Operation>
+			</CustomLayer>
+			<CustomLayer>
+				<Name>GH:gediz_kaynak</Name>
+				<Title>gediz_kaynak</Title>
+				<Operation type="csv">1</Operation>
+			</CustomLayer>
+		</VendorSpecificCapabilities>
+		<UserDefinedSymbolization SupportSLD="1" UserLayer="1" UserStyle="1" RemoteWFS="1"></UserDefinedSymbolization>
+		<Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:gediz_test_polygon</Name>
+				<Title>gediz_test_polygon</Title>
+				<Abstract>GH:gediz_test_polygon ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="27.91584414433958" miny="38.40496394201171" maxx="28.266301481647705" maxy="38.678930182498746"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="580010.0959000001" miny="4251680.431700001" maxx="610200.6194000002" maxy="4281728.078400001"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=gediz_test_polygon"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:alluvial_boundary</Name>
+				<Title>alluvial_boundary</Title>
+				<Abstract>GH:alluvial_boundary ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="26.79873997820581" miny="38.18836688375586" maxx="28.85797224553232" maxy="39.14340357129627"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="482655.4084000001" miny="4228483.0319" maxx="660648.1448999997" maxy="4332869.8475"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=alluvial_boundary"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:coastline</Name>
+				<Title>coastline</Title>
+				<Abstract>GH:coastline ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="18.620132329077308" miny="32.198191134580746" maxx="40.17536848346236" maxy="44.99524038191367"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="5107200.0" miny="1447000.0" maxx="6798000.0" maxy="2484200.0"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=coastline"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:gediz_reservoirs_ponds</Name>
+				<Title>gediz_reservoirs_ponds</Title>
+				<Abstract>GH:gediz_reservoirs_ponds ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="26.82253788296701" miny="38.06933227125472" maxx="29.63713388982267" maxy="39.11002771276737"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="484704.73500000034" miny="4216879.447699999" maxx="728162.1164999995" maxy="4329165.994100001"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=gediz_reservoirs_ponds"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:gediz_rivers_streams</Name>
+				<Title>gediz_rivers_streams</Title>
+				<Abstract>GH:gediz_rivers_streams ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="25.43866506267667" miny="41.90396173651931" maxx="28.59792486013372" maxy="43.052368771926716"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="372870.2636000002" miny="4640485.3234" maxx="630206.8715000004" maxy="4766812.594900001"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=gediz_rivers_streams"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:gediz_soil_gediz_toprak_ed50_utm</Name>
+				<Title>gediz_soil_gediz_toprak_ed50_utm</Title>
+				<Abstract>GH:gediz_soil_gediz_toprak_ed50_utm ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="26.720434898252897" miny="38.021488198631864" maxx="29.775896893799086" maxy="39.23597505092648"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="475920.0869753769" miny="4211897.700447323" maxx="739750.2813150566" maxy="4343143.000408529"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=gediz_soil_gediz_toprak_ed50_utm"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:gediz_landuse_gediz_lu_2018</Name>
+				<Title>gediz_landuse_gediz_lu_2018</Title>
+				<Abstract>GH:gediz_landuse_gediz_lu_2018 ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="26.653259227504492" miny="37.862676053147624" maxx="29.81104600697944" maxy="39.62539712126132"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="5772651.147625521" miny="1860818.8962813541" maxx="6023916.819532872" maxy="2000073.9877122103"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=gediz_landuse_gediz_lu_2018"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:gediz_geologicaldata_bin_birimler_modify_</Name>
+				<Title>gediz_geologicaldata_bin_birimler_modify_</Title>
+				<Abstract>GH:gediz_geologicaldata_bin_birimler_modify_ ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="26.720333719495443" miny="38.02148819820984" maxx="29.77589689362188" maxy="39.23597504950337"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="475911.3547" miny="4211897.7004" maxx="739750.2812999997" maxy="4343143.0004"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=gediz_geologicaldata_bin_birimler_modify_"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:gediz_watershed_boundary</Name>
+				<Title>gediz_watershed_boundary</Title>
+				<Abstract>GH:gediz_watershed_boundary ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="26.720333719495443" miny="38.02148819820984" maxx="29.77589689362188" maxy="39.23597504950337"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="475911.3547" miny="4211897.7004" maxx="739750.2812999999" maxy="4343143.000399999"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=gediz_watershed_boundary"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:kuvaterner_aluvyon</Name>
+				<Title>kuvaterner_aluvyon</Title>
+				<Abstract>GH:kuvaterner_aluvyon ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="26.759675734658547" miny="38.032057659876415" maxx="29.61312422741583" maxy="39.14431128784039"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="479279.8146540363" miny="4212678.503501009" maxx="725973.7211709032" maxy="4332970.745811766"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=kuvaterner_aluvyon"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:mesezoyik_kirectasi</Name>
+				<Title>mesezoyik_kirectasi</Title>
+				<Abstract>GH:mesezoyik_kirectasi ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="27.232656103081382" miny="38.31281095957084" maxx="29.768161801541883" maxy="39.2037603911122"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="520378.62085196807" miny="4244242.093537138" maxx="739190.0324815537" maxy="4339594.350446854"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=mesezoyik_kirectasi"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:mezezoyik_filis</Name>
+				<Title>mezezoyik_filis</Title>
+				<Abstract>GH:mezezoyik_filis ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="27.043164003277347" miny="38.32916842218717" maxx="29.775810299684988" maxy="39.23376580935744"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="503818.8482773639" miny="4246075.799335163" maxx="739750.281315052" maxy="4342898.735070172"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=mezezoyik_filis"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:neojen_killi_kirectasi</Name>
+				<Title>neojen_killi_kirectasi</Title>
+				<Abstract>GH:neojen_killi_kirectasi ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="26.840418136456773" miny="38.08346477076286" maxx="29.494011520153727" maxy="39.1879544260127"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="486265.8441605969" miny="4218105.072232047" maxx="715532.9560619327" maxy="4337814.180771591"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=neojen_killi_kirectasi"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:neojen_kirintili_birimler</Name>
+				<Title>neojen_kirintili_birimler</Title>
+				<Abstract>GH:neojen_kirintili_birimler ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="26.726627548374736" miny="38.02834856571172" maxx="29.740708699967954" maxy="39.21779973741281"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="476448.45994249504" miny="4212572.698272638" maxx="736769.4808518093" maxy="4341125.972782057"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=neojen_kirintili_birimler"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:paleozoyik_birimler</Name>
+				<Title>paleozoyik_birimler</Title>
+				<Abstract>GH:paleozoyik_birimler ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="27.49001011051187" miny="38.02219202817308" maxx="29.742794017688837" maxy="39.17965448499743"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="543039.3074257125" miny="4211897.700447327" maxx="737074.3070517387" maxy="4337010.756027489"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=paleozoyik_birimler"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:paleozoyik_mermer</Name>
+				<Title>paleozoyik_mermer</Title>
+				<Abstract>GH:paleozoyik_mermer ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="27.80347060363373" miny="38.07400299263537" maxx="29.659662906404076" maxy="39.17660672792875"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="570495.0768455011" miny="4217446.717647086" maxx="729887.0309275691" maxy="4336871.306935717"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=paleozoyik_mermer"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+			<Layer queryable="1" opaque="0">
+				<Name>GH:volkanik_kayalar</Name>
+				<Title>volkanik_kayalar</Title>
+				<Abstract>GH:volkanik_kayalar ABSTRACT</Abstract>
+				<KeywordList>
+					<Keyword>group˸shp˸˸˸disabledownload˸notListing˸˸maxZoom˸7</Keyword>
+				</KeywordList>
+				<SRS>EPSG:4326</SRS>
+				<LatLonBoundingBox minx="26.72033371951388" miny="38.43313531423697" maxx="29.67747876017916" maxy="39.23597506137733"></LatLonBoundingBox>
+				<BoundingBox SRS="EPSG:4326" minx="475911.35470161814" miny="4257376.098861751" maxx="731242.9000047087" maxy="4343143.000408531"></BoundingBox>
+				<Style>
+					<Name>1</Name>
+					<Title>1</Title>
+					<Abstract></Abstract>
+					<LegendURL width="20" height="20">
+						<Format>image/png</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.csr.ufmg.br:443/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=volkanik_kayalar"></OnlineResource>
+					</LegendURL>
+				</Style>
+			</Layer>
+		</Layer>
+	</Capability>
+</WMT_MS_Capabilities>
